@@ -16,21 +16,28 @@ You can check out my demo video here: https://app.screencast.com/MoAlIaayeseXs
    
    There are four types of research executed in parallel:
    - Internal Documents Search
+     
    Internal documents are the main database shared across all users in the same organization. The system generates 5 search queries to search through the vector store of documents using Azure AI Search, retrieving the top 10 chunks for each query. In total, 50 chunks are returned from this search.
+   
    - Web Search
+   - 
    The system automatically searches the web to find relevant data for the report. It generates 5 web search queries, conducting the search with Tavily Search Engine and retrieving the top 10 chunks for each query. In total, 50 chunks are returned from this search.
+
    - User-Specified URLs
+     
    Users can specify URLs they want to research for the report. The system leverages the Exa API to find relevant data from these URLs.
+   
    - User-Uploaded Files
+     
    Users can upload their custom documents for research. The system leverages FAISS in-memory vector store and semantic search to find the most relevant data from the user-uploaded files.
 
-3. The system ranks all chunks returned from the research (50 * 4 = 200) using a Large Language Model (LLM).
+4. The system ranks all chunks returned from the research (50 * 4 = 200) using a Large Language Model (LLM).
    
-4. The top 20 chunks are fetched and passed to the LLM as a reference. Optionally, users can select chunks to use, rather than selecting the top 20 chunks. Additionally, users can conduct research with their own queries for all four types of research.
+5. The top 20 chunks are fetched and passed to the LLM as a reference. Optionally, users can select chunks to use, rather than selecting the top 20 chunks. Additionally, users can conduct research with their own queries for all four types of research.
 
-5. Finally, the LLM generates a report based on the given report details and research data, including citations.
+6. Finally, the LLM generates a report based on the given report details and research data, including citations.
 
-6. Users can edit the reports manually using a Tiptap editor.
+7. Users can edit the reports manually using a Tiptap editor.
 All of the numbers in the workflow are configurable from user settings.
 
 ## AI Assistant
