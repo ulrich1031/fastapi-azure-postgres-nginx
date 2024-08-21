@@ -20,7 +20,7 @@ You can check out my demo video here: https://app.screencast.com/MoAlIaayeseXs
    Internal documents are the main database shared across all users in the same organization. The system generates 5 search queries to search through the vector store of documents using Azure AI Search, retrieving the top 10 chunks for each query. In total, 50 chunks are returned from this search.
    
    - Web Search
-   - 
+   
    The system automatically searches the web to find relevant data for the report. It generates 5 web search queries, conducting the search with Tavily Search Engine and retrieving the top 10 chunks for each query. In total, 50 chunks are returned from this search.
 
    - User-Specified URLs
