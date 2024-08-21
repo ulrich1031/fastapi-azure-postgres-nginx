@@ -54,7 +54,7 @@ You can check out my demo video here: https://app.screencast.com/k3V1ZZwbBG98v
    - HighChart
    The agent calls the HighChart tool to create visualizations.
 
-# Techonologies
+# Technologies
 
 1. FastAPI as RESTful API framework
    
